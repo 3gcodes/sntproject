@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SNT Test - Web Scraper</title>
+	<link href="/snt/static/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/snt/static/css/snt.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">SNT Test Project</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<h3>Enter a URL</h3>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-danger" style="display: none;">
+					<div class="panel-heading">Error</div>
+					<div class="panel-body">
+					</div>
+				</div>
+				<form class="form-inline">
+					<div class="form-group">
+						<label class="sr-only" for="articleAddress">CNN Article Address</label>
+						<input type="url" class="form-control col-md-12" id="articleAddress" placeholder="CNN Article Address">
+					</div>
+					<button type="submit" class="btn btn-default btn-primary">Fetch</button>
+				</form>
+			</div>
+		</div>
+		<div class="row loading" style="display:none;">
+			<div class="col-md-12">
+				<img src="/snt/static/images/loading.gif" align="center" />
+			</div>
+		</div>
+		<div class="row content" style="display:none;">
+			<div class="col-md-12">
+				<img id="photo" />
+				<h3 id="headline"></h3>
+				<p id="story"></p>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="/snt/static/libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/snt/static/js/snt.js"></script>
+</body>
+</html>
