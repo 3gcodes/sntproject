@@ -1,4 +1,4 @@
-	<?php
+<?php
 	class Parser {
 
 		private $article;
@@ -55,4 +55,4 @@
 			}	
 		}
 	}
-	?>
+?>

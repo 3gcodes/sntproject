@@ -1,4 +1,4 @@
-	<?php
+<?php
 	class Article implements JsonSerializable {
 		private $url = "";
 		private $headline = "";
@@ -58,4 +58,4 @@
 			];
 		}
 	}
-	?>
+?>
