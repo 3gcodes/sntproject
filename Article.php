@@ -1,4 +1,4 @@
-<?php
+	<?php
 	class Article implements JsonSerializable {
 		private $url = "";
 		private $headline = "";
@@ -47,15 +47,15 @@
 		}
 
 		public function jsonSerialize() {
-        	return [
-            	'article' => [
-                	'url' => $this->url,
-                	'headline' => $this->headline,
-                	'story' => $this->story,
-                	'photo' => $this->photo,
-                	'success' => $this->success
-            	]
-        	];
-    }
+			return [
+			'article' => [
+			'url' => $this->url,
+			'headline' => $this->headline,
+			'story' => $this->story,
+			'photo' => $this->photo,
+			'success' => $this->success
+			]
+			];
+		}
 	}
-?>
+	?>

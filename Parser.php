@@ -1,4 +1,4 @@
-<?php
+	<?php
 	class Parser {
 
 		private $article;
@@ -15,14 +15,14 @@
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 			$data = curl_exec($ch);
 			if(curl_errno($ch)){
-    			$this->article->set_success(false);
+				$this->article->set_success(false);
 			} else {
 				$doc = DOMDocument::loadHTML($data);
 				$this->xpath = new DOMXPath($doc);
 				$this->parse_headline($data);
 				$this->parse_photo($data);
 				$this->parse_story($data);	
-				}
+			}
 			curl_close($ch);
 			return $this->article;
 		}
@@ -55,4 +55,4 @@
 			}	
 		}
 	}
-?>
+	?>
